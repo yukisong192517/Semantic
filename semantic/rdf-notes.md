@@ -110,10 +110,15 @@ class expression: constraints on property
 	- example
 	
 	```
-	<owl:Class rdf:about=“#SingleMaltWhisky”><owl:equivalentClass>    <owl:Class>      <owl:intersectionOf rdf:parseType="Collection">        <owl:Class rdf:about=“#Whisky”/>        <owl:Restriction>          <owl:onProperty rdf:resource=“#distilledBy”/>          <owl:cardinality>1</owl:cardinality>        </owl:Restriction>      </owl:intersectionOf>    <owl:Class>  </owl:equivalentClass></owl:Class>
-
+	<owl:Class rdf:about=“#SingleMaltWhisky”>	<owl:equivalentClass>
+	<owl:Class>	<owl:intersectionOf rdf:parseType="Collection">
+	<owl:Class rdf:about=“#Whisky”/>    <owl:Restriction>    <owl:onProperty rdf:resource=“#distilledBy”/>         				 <owl:cardinality>1</owl:cardinality>      				</owl:Restriction>      			</owl:intersectionOf>
+      		<owl:Class>
+      	</owl:equivalentClass>
+      	</owl:Class>
 	```
-	主语：SingleMaltWhisky 等同于 主语：whiskey 与 谓语：distilledby ,通过限制cardinality=1 进行相交得出的类
+主语：SingleMaltWhisky 等同于 主语：whiskey 与 谓语：distilledby ,通过限制cardinality=1 进行相交得出的类
+
 - local range constraints
 
 	- ∃R.C, ∀R.C
