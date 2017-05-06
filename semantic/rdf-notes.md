@@ -336,8 +336,10 @@ OWL2 Allow: define such property compositions```<owl:ObjectProperty rdf:about
 
 ## Keys
 
-define uniquely identifying keys that comprise several propertie
+define uniquely identifying keys that comprise several properties
 
 ```<owl:Class rdf:about=“Person”>  <owl:hasKey rdf:parseType=“Collection”>    <owl:DatatypeProperty rdf:about=“hasSSN”/>    <owl:DatatypeProperty rdf:about=“birthDate”/>  </owl:hasKey></owl:Class>```
+
+## Datatype
 
 For example, the datatype of integers greater than or equal to 5:```<owl:Datatype>  <owl:onDatatype rdf:resource=“&xsd;integer”/>  <owl:withRestrictions rdf:parseType=“Collection”>    <xsd:minInclusive rdf:datatype=“&xsd;integer”>5</xsd:minInclusive>  </owl:withRestrictions></owl:Datatype>```
